@@ -1,0 +1,161 @@
+/*  font famlys 
+      font-family: 'Montserrat', sans-serif;
+      font-family: 'Fraunces', serif;
+*/
+/*
+    SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+    FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+/* 
+    colors
+    ### Primary
+
+      - Dark cyan: hsl(158, 36%, 37%)
+      - Cream: hsl(30, 38%, 92%)
+
+    ### Neutral
+
+      - Very dark blue: hsl(212, 21%, 14%)
+      - Dark grayish blue: hsl(228, 12%, 48%)
+      - White: hsl(0, 0%, 100%)
+ */
+/* general styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100vh;
+
+  background: hsl(30, 38%, 92%);
+  color: hsl(212, 21%, 14%);
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+/* component styling */
+.card {
+  display: flex;
+
+  max-width: 700px;
+  width: 100%;
+  height: 500px;
+
+  background: hsl(0, 0%, 100%);
+  overflow: hidden;
+  border-radius: 10px;
+}
+.card-image {
+  width: 50%;
+
+  background: url(images/image-product-desktop.jpg);
+  background-size: cover;
+}
+.card-details {
+  padding: 32px;
+
+  width: 50%;
+}
+.product-type {
+  margin-bottom: 24px;
+
+  color: hsl(228, 12%, 48%);
+
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+.product-name {
+  margin-bottom: 24px;
+
+  font-family: "Fraunces", serif;
+  font-size: 40px;
+  line-height: 1;
+}
+.product-description {
+  margin-bottom: 24px;
+
+  letter-spacing: 1.2px;
+  line-height: 1.6;
+
+  color: hsl(228, 12%, 48%);
+}
+.product-price {
+  margin-bottom: 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  font-family: "Fraunces", serif;
+  font-size: 40px;
+
+  color: hsl(158, 36%, 37%);
+}
+.product-discount {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+
+  color: hsl(228, 12%, 48%);
+}
+.product-button {
+  margin-bottom: 24px;
+  padding: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  width: 100%;
+
+  border: none;
+  border-radius: 10px;
+
+  background: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+
+  transition: background ease 0.3s;
+  cursor: pointer;
+}
+
+.product-button:hover {
+  background: hsl(158, 36%, 24%);
+}
+
+/* mobile breack point */
+@media only screen and (max-width: 750px) {
+  .card {
+    flex-direction: column;
+
+    height: 700px;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 50%;
+
+    background: url(images/image-product-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .card-details {
+    padding: 24px;
+
+    width: 100%;
+  }
+}
